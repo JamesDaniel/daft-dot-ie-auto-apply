@@ -12,8 +12,6 @@ async function sendSms(config, message) {
     const authToken = config.twilioAuthToken;
     const client = require('twilio')(accountSid, authToken);
 
-    console.log('Sending SMS');
-
     const promises = [];
     promises.push(sms(client, message, config, config.phoneTo1));
     promises.push(sms(client, message, config, config.phoneTo2));

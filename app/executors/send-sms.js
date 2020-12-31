@@ -3,7 +3,7 @@ const listen = require('../tasks/unix-socket-service').listen;
 
 async function startListening(config) {
     try {
-        listen('smsListener', (data) => {
+        listen(`${config.appId}smsListener`, (data) => {
             sendSms(config, JSON.parse(data));
         });
     } catch (error) {

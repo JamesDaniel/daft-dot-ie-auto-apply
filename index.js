@@ -1,5 +1,6 @@
 const application = require('./app/main');
 const config = {
+    appId: 'daftDotIeScreenScraper',
     filename: process.env.FILENAME || './apartments.json',
     emailFrom: process.env.EMAIL_FROM,
     emailSenderPassword: process.env.EMAIL_SENDER_PASSWORD,
